@@ -1,0 +1,6 @@
+{
+  "name": "AlgoPulse - Institutional Algo Trading Engine",
+  "description": "Institutional-grade crypto algorithmic trading terminal for CoinDCX with offline prompt-to-strategy AST engine, candlestick charting, 15 preinstalled institutional algos, and Indian Tax & Fee Ledger compliant with Sec 194S and Sec 115BBH.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
