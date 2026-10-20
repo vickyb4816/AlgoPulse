@@ -1,0 +1,7 @@
+{
+  "appId": "com.vicky.algopulse",
+  "appName": "AlgoPulse",
+  "webDir": "www",
+  "backgroundColor": "#0d131f",
+  "android": { "allowMixedContent": false }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "algopulse",
+  "version": "1.3.0",
+  "private": true,
+  "description": "AlgoPulse crypto trading bot UI as an Android app",
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  }
+}

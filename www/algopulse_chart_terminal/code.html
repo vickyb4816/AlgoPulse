@@ -1,0 +1,701 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed":"#58ffa5","outline-variant":"#3b494c","on-primary-container":"#00626e","error-container":"#93000a","tertiary":"#ffe7e7","secondary-fixed-dim":"#00e388","on-background":"#dde2f3","on-secondary-fixed-variant":"#00522e","on-error":"#690005","surface-container-lowest":"#080e1a","error":"#ffb4ab","tertiary-fixed":"#ffdada","on-secondary-fixed":"#00210f","on-surface":"#dde2f3","on-primary-fixed-variant":"#004f58","primary-container":"#00e5ff","surface-dim":"#0d131f","secondary":"#b2ffca","tertiary-container":"#ffc1c2","primary":"#c3f5ff","on-primary":"#00363d","surface-container-highest":"#2f3542","outline":"#849396","surface":"#0d131f","on-secondary-container":"#00683b","surface-tint":"#00daf3","surface-container-low":"#161c28","on-tertiary":"#680017","on-primary-fixed":"#001f24","inverse-on-surface":"#2a303d","primary-fixed":"#9cf0ff","surface-container-high":"#242a37","surface-bright":"#333946","inverse-surface":"#dde2f3","on-tertiary-container":"#b4002f","surface-variant":"#2f3542","primary-fixed-dim":"#00daf3","on-error-container":"#ffdad6","on-tertiary-fixed-variant":"#920024","surface-container":"#1a202c","tertiary-fixed-dim":"#ffb3b4","inverse-primary":"#006875","on-surface-variant":"#bac9cc","background":"#0d131f","on-secondary":"#00391e","secondary-container":"#00f090","on-tertiary-fixed":"#40000b"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{gutter:"0.75rem","space-xl":"1.5rem","margin-sm":"0.75rem","space-md":"0.75rem","space-lg":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-compact":"0.5rem",margin:"1rem"},fontFamily:{"data-sm":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"title-sm":["Geist"],"data-md":["JetBrains Mono"],"label-md":["JetBrains Mono"],"body-md":["Geist"],"title-md":["Geist"],"body-lg":["Geist"],"headline-sm":["Space Grotesk"],"body-sm":["Geist"],"headline-md":["Space Grotesk"],"headline-lg":["Space Grotesk"],"label-sm":["JetBrains Mono"],"data-lg":["JetBrains Mono"]},fontSize:{"data-sm":["11px",{lineHeight:"14px",fontWeight:"500"}],"headline-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-sm":["14px",{lineHeight:"20px",fontWeight:"600"}],"data-md":["14px",{lineHeight:"18px",fontWeight:"500"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"500"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"title-md":["16px",{lineHeight:"22px",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.03em",fontWeight:"700"}],"label-sm":["10px",{lineHeight:"12px",letterSpacing:"0.06em",fontWeight:"600"}],"data-lg":["20px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"700"}]}}}}</script></head><body class="bg-background text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="AlgoPulse Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vn9FivyldqQUOFbYVHdlK9p9trGTnRR5l3cNCt5w6WZjhpnYhGZlf5jFxbVGHJ9Zrmf02E-pLd0fOVzN4rgo337JRTe9lcWNLX_sala9SDBP5hl-6SyF4M6RDCvFuNyR-6OjbMHRki5B6q8FtqYe-2luxKLb4kCREmd_RVfNK4Z0T0OQ0IfWDLKW1Lya2HGCdZ7iUBFG_KCMrAuVGC8GxCvQHGRAnJIoD3HWj7e3dnzm-CKN7JeeGaeg"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">AlgoPulse</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-high text-primary font-medium">v1.3.0</span></div><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-on-surface-variant truncate">Chart</span></div></div></div><div class="flex items-center gap-space-xs"><div class="hidden xs:flex items-center gap-1.5 px-2 py-1 rounded-full bg-surface-container-low"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary-container"></span></span><span class="font-label-sm text-label-sm text-secondary">CoinDCX Live</span></div><div class="flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-low"><span class="font-data-sm text-data-sm text-on-surface font-semibold">BTCUSDT</span><span class="font-data-sm text-data-sm text-secondary-container">+2.45%</span></div><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface select-none pb-6">
+<!-- Coin Header & Live Telemetry -->
+<div class="px-gutter pt-2 pb-3 bg-surface-container-lowest/80 backdrop-blur-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm cursor-pointer active:scale-95 transition-transform" id="pairSelectorBtn">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">BTC/USDT</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold uppercase">Perp</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant transition-transform duration-200" id="pairChevron">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container active:scale-90 transition-all" id="favBtn">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Quick Pair Dropdown Drawer -->
+<div class="hidden flex-col gap-1.5 p-2 rounded-xl bg-surface-container-high/95 backdrop-blur-2xl shadow-xl transition-all" id="pairDrawer">
+<div class="flex items-center gap-2 px-2.5 py-1.5 bg-surface-container-lowest rounded-lg mb-1">
+<span class="material-symbols-outlined text-outline text-[16px]">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none placeholder:text-outline" placeholder="Search perpetual contracts..." type="text">
+</div>
+<div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-surface-container cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-data-md text-data-md font-bold">ETH/USDT</span>
+<span class="font-label-sm text-label-sm px-1 rounded bg-surface-container-highest text-on-surface-variant">20x</span>
+</div>
+<div class="text-right font-data-sm text-data-sm">
+<span class="text-on-surface font-semibold">$3,485.20</span>
+<span class="text-secondary-container ml-1.5">+4.12%</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">star</span>
+<span class="font-data-md text-data-md font-bold">SOL/USDT</span>
+<span class="font-label-sm text-label-sm px-1 rounded bg-surface-container-highest text-on-surface-variant">15x</span>
+</div>
+<div class="text-right font-data-sm text-data-sm">
+<span class="text-on-surface font-semibold">$184.65</span>
+<span class="text-secondary-container ml-1.5">+8.92%</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">star</span>
+<span class="font-data-md text-data-md font-bold">DOGE/USDT</span>
+<span class="font-label-sm text-label-sm px-1 rounded bg-surface-container-highest text-on-surface-variant">25x</span>
+</div>
+<div class="text-right font-data-sm text-data-sm">
+<span class="text-on-surface font-semibold">$0.1492</span>
+<span class="text-error ml-1.5">-1.48%</span>
+</div>
+</div>
+</div>
+<!-- Ticker Metrics Line -->
+<div class="flex items-baseline justify-between flex-wrap gap-y-2">
+<div class="flex items-baseline gap-2">
+<span class="font-data-lg text-data-lg font-bold tracking-tight text-on-surface" id="liveTickerPrice">$67,420.67</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/15 text-secondary-container font-data-sm text-data-sm font-semibold flex items-center gap-0.5 shadow-[0_0_12px_rgba(0,240,144,0.25)]">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_up</span>+3.84%
+        </span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">24h High</span>
+<span class="font-data-sm text-data-sm text-on-surface font-semibold">$68,150.00</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">24h Low</span>
+<span class="font-data-sm text-data-sm text-on-surface font-semibold">$65,210.00</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">24h Vol</span>
+<span class="font-data-sm text-data-sm text-primary font-semibold">1.42B</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeframe Bar & Compact Tools -->
+<div class="flex items-center justify-between px-gutter py-2 bg-surface-container-low/60 backdrop-blur-sm gap-2">
+<div class="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5" id="tfList">
+<button class="px-2 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors">1m</button>
+<button class="px-2 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors">5m</button>
+<button class="px-2.5 py-1 rounded-md font-label-md text-label-md bg-primary-container text-on-primary-container font-bold shadow-[0_0_14px_rgba(0,229,255,0.4)]">15m</button>
+<button class="px-2 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors">1h</button>
+<button class="px-2 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors">4h</button>
+<button class="px-2 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors">1D</button>
+<button class="px-2 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors">1W</button>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button class="flex items-center gap-1 px-2 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" id="chartTypeBtn">
+<span class="material-symbols-outlined text-[15px] text-primary">candlestick_chart</span>
+<span class="">Candles</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container text-primary-fixed-dim font-label-sm text-label-sm active:scale-95 transition-all" id="openIndicatorsBtn">
+<span class="material-symbols-outlined text-[15px]">auto_graph</span>
+<span class="hidden xs:inline">Indicators</span>
+<span class="w-4 h-4 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center font-bold text-[9px]">3</span>
+</button>
+<button class="p-1 rounded-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" id="settingsToggleBtn">
+<span class="material-symbols-outlined text-[17px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Settings Micro-Bar (Collapsible) -->
+<div class="hidden px-gutter py-1.5 bg-surface-container-high/90 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm transition-all" id="chartSettingsRow">
+<div class="flex items-center gap-3 overflow-x-auto no-scrollbar">
+<label class="flex items-center gap-1 cursor-pointer">
+<input checked="" class="accent-primary-container h-3 w-3 rounded" type="checkbox">
+<span class="">Grid</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer">
+<input checked="" class="accent-primary-container h-3 w-3 rounded" type="checkbox">
+<span class="">Volume</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer">
+<input class="accent-primary-container h-3 w-3 rounded" type="checkbox">
+<span class="">Log</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer">
+<input checked="" class="accent-primary-container h-3 w-3 rounded" type="checkbox">
+<span class="">Magnet</span>
+</label>
+<label class="flex items-center gap-1 cursor-pointer">
+<input checked="" class="accent-primary-container h-3 w-3 rounded" type="checkbox">
+<span class="">Last Price Line</span>
+</label>
+</div>
+<span class="text-primary cursor-pointer shrink-0 ml-2">Reset</span>
+</div>
+<!-- Active Technical Ribbon Badges -->
+<div class="flex items-center gap-2 px-gutter py-1.5 bg-surface-container-lowest text-on-surface-variant font-data-sm text-data-sm overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-1 shrink-0 px-2 py-0.5 rounded-full bg-surface-container-low">
+<span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+<span class="text-on-surface">EMA 20:</span>
+<span class="text-primary-container font-semibold">67,112.4</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 px-2 py-0.5 rounded-full bg-surface-container-low">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="text-on-surface">EMA 50:</span>
+<span class="text-primary font-semibold">66,540.8</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 px-2 py-0.5 rounded-full bg-surface-container-low">
+<span class="w-2 h-2 rounded-full bg-secondary-container inline-block"></span>
+<span class="text-on-surface">Supertrend(10,3):</span>
+<span class="text-secondary-container font-semibold">Bullish</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 px-2 py-0.5 rounded-full bg-surface-container-low">
+<span class="w-2 h-2 rounded-full bg-surface-bright inline-block"></span>
+<span class="text-on-surface">BB(20,2):</span>
+<span class="text-on-surface-variant">68,240 / 66,120</span>
+</div>
+</div>
+<!-- Primary Interactive Canvas Chart Area -->
+<div class="relative w-full h-[360px] bg-surface-container-lowest overflow-hidden flex flex-col justify-between"><!-- Synthetic High-Tech Chart Rendering (SVGs with Glow & Gradients) -->
+<div class="relative w-full h-full flex overflow-hidden">
+  <div class="relative flex-1 h-full overflow-hidden">
+    <svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 340 360">
+      <defs>
+        <!-- Horizontal Grids -->
+        <pattern height="40" id="grid" patternUnits="userSpaceOnUse" width="68">
+          <path d="M 68 0 L 0 0 0 68" fill="none" stroke="rgba(255, 255, 255, 0.035)" stroke-width="0.8"></path>
+        </pattern>
+        <!-- Gradients -->
+        <linearGradient id="volGreenGrad" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#00f090" stop-opacity="0.5"></stop>
+          <stop offset="100%" stop-color="#00f090" stop-opacity="0.05"></stop>
+        </linearGradient>
+        <linearGradient id="volRedGrad" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#ffb4ab" stop-opacity="0.45"></stop>
+          <stop offset="100%" stop-color="#ffb4ab" stop-opacity="0.05"></stop>
+        </linearGradient>
+        <linearGradient id="bbAreaGrad" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.08"></stop>
+          <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.01"></stop>
+        </linearGradient>
+      </defs>
+      <!-- Background Grid -->
+      <rect fill="url(#grid)" height="100%" width="100%"></rect>
+      <!-- Bollinger Bands Shaded Corridor -->
+      <polygon fill="url(#bbAreaGrad)" points="10,65 42,75 75,82 108,90 142,105 175,95 208,85 242,70 275,60 310,50 310,190 275,195 242,205 208,215 175,225 142,230 108,220 75,210 42,200 10,195"></polygon>
+      <!-- EMA 50 Ribbon (Cyan-Tint Slow) -->
+      <path d="M 0,200 Q 70,185 140,165 T 270,135 T 340,118" fill="none" opacity="0.55" stroke="#9cf0ff" stroke-dasharray="3 3" stroke-width="1.4"></path>
+      <!-- EMA 20 Ribbon (Electric Cyan Fast) -->
+      <path d="M 0,180 Q 75,170 145,140 T 255,110 T 340,92" fill="none" opacity="0.85" stroke="#00e5ff" stroke-width="2"></path>
+      <!-- Supertrend Line (Neon Emerald Bullish Signal Step) -->
+      <path d="M 0,215 L 100,215 L 100,195 L 195,195 L 195,165 L 285,165 L 285,148 L 340,148" fill="none" stroke="#00f090" stroke-linecap="round" stroke-width="2.2"></path>
+      <!-- Candlesticks (Obsidian Glow Precision) -->
+      <!-- Candle 1: Bullish -->
+      <line stroke="#00f090" stroke-width="1" x1="22" x2="22" y1="170" y2="210"></line>
+      <rect fill="#00f090" height="24" rx="1" width="8" x="18" y="178"></rect>
+      <!-- Candle 2: Bearish -->
+      <line stroke="#ffb4ab" stroke-width="1" x1="48" x2="48" y1="165" y2="205"></line>
+      <rect fill="#ffb4ab" height="26" rx="1" width="8" x="44" y="172"></rect>
+      <!-- Candle 3: Bullish -->
+      <line stroke="#00f090" stroke-width="1" x1="74" x2="74" y1="150" y2="195"></line>
+      <rect fill="#00f090" height="28" rx="1" width="8" x="70" y="160"></rect>
+      <!-- Candle 4: Bullish Hammer -->
+      <line stroke="#00f090" stroke-width="1" x1="100" x2="100" y1="140" y2="185"></line>
+      <rect fill="#00f090" height="18" rx="1" width="8" x="96" y="145"></rect>
+      <!-- Candle 5: Bearish Consolidation -->
+      <line stroke="#ffb4ab" stroke-width="1" x1="126" x2="126" y1="142" y2="175"></line>
+      <rect fill="#ffb4ab" height="16" rx="1" width="8" x="122" y="148"></rect>
+      <!-- Candle 6: Bullish Breakout -->
+      <line stroke="#00f090" stroke-width="1" x1="152" x2="152" y1="120" y2="165"></line>
+      <rect fill="#00f090" height="32" rx="1" width="8" x="148" y="125"></rect>
+      <!-- Candle 7: Bullish Run -->
+      <line stroke="#00f090" stroke-width="1" x1="178" x2="178" y1="105" y2="145"></line>
+      <rect fill="#00f090" height="26" rx="1" width="8" x="174" y="112"></rect>
+      <!-- Candle 8: Indecision Doji -->
+      <line stroke="#00daf3" stroke-width="1" x1="204" x2="204" y1="95" y2="135"></line>
+      <rect fill="#00daf3" height="3" rx="0.5" width="8" x="200" y="110"></rect>
+      <!-- Candle 9: Pullback Bearish -->
+      <line stroke="#ffb4ab" stroke-width="1" x1="230" x2="230" y1="100" y2="138"></line>
+      <rect fill="#ffb4ab" height="22" rx="1" width="8" x="226" y="105"></rect>
+      <!-- Candle 10: Bullish Engulfing -->
+      <line stroke="#00f090" stroke-width="1" x1="256" x2="256" y1="78" y2="125"></line>
+      <rect fill="#00f090" height="34" rx="1" width="8" x="252" y="84"></rect>
+      <!-- Candle 11: High Surge -->
+      <line stroke="#00f090" stroke-width="1" x1="282" x2="282" y1="62" y2="108"></line>
+      <rect fill="#00f090" height="32" rx="1" width="8" x="278" y="70"></rect>
+      <!-- Candle 12 (Live Tick Candle with Pulsing Wick) -->
+      <line stroke="#00f090" stroke-width="1.5" x1="308" x2="308" y1="56" y2="98"></line>
+      <rect class="animate-pulse" fill="#00f090" height="24" rx="1" width="8" x="304" y="64"></rect>
+      <!-- Live Candle Ping Dot -->
+      <circle cx="308" cy="64" fill="#00f090" r="3"></circle>
+      <circle class="animate-ping" cx="308" cy="64" fill="#00e5ff" opacity="0.8" r="5"></circle>
+      <!-- Volume Bars at Base -->
+      <rect fill="url(#volGreenGrad)" height="25" width="8" x="18" y="315"></rect>
+      <rect fill="url(#volRedGrad)" height="18" width="8" x="44" y="322"></rect>
+      <rect fill="url(#volGreenGrad)" height="32" width="8" x="70" y="308"></rect>
+      <rect fill="url(#volGreenGrad)" height="22" width="8" x="96" y="318"></rect>
+      <rect fill="url(#volRedGrad)" height="12" width="8" x="122" y="328"></rect>
+      <rect fill="url(#volGreenGrad)" height="45" width="8" x="148" y="295"></rect>
+      <rect fill="url(#volGreenGrad)" height="35" width="8" x="174" y="305"></rect>
+      <rect fill="url(#volGreenGrad)" height="15" width="8" x="200" y="325"></rect>
+      <rect fill="url(#volRedGrad)" height="28" width="8" x="226" y="312"></rect>
+      <rect fill="url(#volGreenGrad)" height="55" width="8" x="252" y="285"></rect>
+      <rect fill="url(#volGreenGrad)" height="62" width="8" x="278" y="278"></rect>
+      <rect fill="url(#volGreenGrad)" height="70" width="8" x="304" y="270"></rect>
+      <!-- Trade Overlay Horizontal Lines -->
+      <!-- Take Profit Line -->
+      <line stroke="#00f090" stroke-dasharray="4 3" stroke-width="1.2" x1="0" x2="340" y1="32" y2="32"></line>
+      <!-- Current Live Price Horizontal Crosshair Guideline -->
+      <line opacity="0.9" stroke="#00e5ff" stroke-dasharray="3 2" stroke-width="1.4" x1="0" x2="340" y1="64" y2="64"></line>
+      <!-- Entry Line -->
+      <line stroke="#00daf3" stroke-dasharray="3 3" stroke-width="1.2" x1="0" x2="340" y1="84" y2="84"></line>
+      <!-- Trailing Stop Line -->
+      <line stroke="#ffdada" stroke-dasharray="4 2" stroke-width="1.2" x1="0" x2="340" y1="112" y2="112"></line>
+      <!-- Stop Loss Line -->
+      <line stroke="#ffb4ab" stroke-width="1.2" x1="0" x2="340" y1="144" y2="144"></line>
+    </svg>
+
+    <!-- Real-Time Price Movement Top Left Floating Telemetry Pill -->
+    <div class="absolute left-2 top-2 z-10 flex items-center gap-1.5 flex-wrap pointer-events-none">
+      <div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high/90 backdrop-blur-md shadow text-data-sm font-data-sm">
+        <span class="relative flex h-1.5 w-1.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-secondary-container"></span>
+        </span>
+        <span class="text-secondary-container font-bold">+$14.20</span>
+        <span class="text-secondary-container font-medium">(+0.02%)</span>
+        <span class="text-outline text-[10px] ml-0.5">Vol: 18.4 BTC</span>
+      </div>
+      <div class="hidden xs:flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-[10px] font-data-sm text-outline">
+        <span class="">Spread: <strong class="text-on-surface">0.10</strong></span>
+        <span class="text-secondary-container flex items-center font-bold">▲ Up</span>
+      </div>
+    </div>
+
+    <!-- Interactive Execution Badges positioned on canvas -->
+    <div class="absolute inset-0 pointer-events-none">
+      <!-- TP Badge -->
+      <div class="absolute right-1 top-[22px] flex items-center gap-1 bg-surface-container-high/95 px-1.5 py-0.5 rounded shadow">
+        <span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+        <span class="font-data-sm text-data-sm text-secondary-container font-bold">TP: $69,200.00</span>
+        <span class="font-label-sm text-label-sm text-secondary">(+3.59%)</span>
+      </div>
+      <!-- Entry Price Badge -->
+      <div class="absolute right-1 top-[80px] flex items-center gap-1 bg-surface-container-high/95 px-1.5 py-0.5 rounded">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+        <span class="font-data-sm text-data-sm text-primary-fixed-dim">ENTRY: $66,800.00</span>
+      </div>
+      <!-- Trailing Stop Badge -->
+      <div class="absolute right-1 top-[108px] flex items-center gap-1 bg-surface-container-high/90 px-1.5 py-0.5 rounded">
+        <span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+        <span class="font-data-sm text-data-sm text-tertiary-fixed-dim">TRAIL: $66,300.00</span>
+      </div>
+      <!-- Stop Loss Badge -->
+      <div class="absolute right-1 top-[140px] flex items-center gap-1 bg-surface-container-high/95 px-1.5 py-0.5 rounded shadow">
+        <span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+        <span class="font-data-sm text-data-sm text-error font-bold">SL: $65,950.00</span>
+        <span class="font-label-sm text-label-sm text-error-container">(-1.27%)</span>
+      </div>
+    </div>
+
+    <!-- Chart Toolset & Bottom Bar Items -->
+    <div class="absolute left-2 bottom-3 flex items-center gap-1.5 pointer-events-auto z-10">
+      <button class="w-7 h-7 rounded bg-surface-container-high/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-[15px]">straighten</span>
+      </button>
+      <button class="w-7 h-7 rounded bg-surface-container-high/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-[15px]">brush</span>
+      </button>
+      <button class="w-7 h-7 rounded bg-surface-container-high/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-[15px]">vertical_align_center</span>
+      </button>
+    </div>
+
+    <!-- Time Axis with 15m Countdown Timer -->
+    <div class="absolute right-2 bottom-1.5 flex items-center gap-4 font-data-sm text-[10px] text-outline z-10">
+      <span class="">14:00</span>
+      <span class="">14:30</span>
+      <span class="">15:00</span>
+      <span class="">15:30</span>
+      <span class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-high/80 text-primary-container font-semibold">
+        <span class="material-symbols-outlined text-[12px] animate-pulse">timer</span>
+        <span class="">08:42</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Vertical Y-Axis Price Scale Sidebar -->
+  <div class="w-16 shrink-0 h-full bg-surface-container-lowest/95 border-l border-outline-variant/30 flex flex-col justify-between py-2 text-right pr-1 select-none font-data-sm text-[10px] relative">
+    <div class="text-outline hover:text-on-surface transition-colors">69,500.00</div>
+    <div class="text-secondary-container font-medium">69,200.00</div>
+    <div class="text-outline hover:text-on-surface transition-colors">68,500.00</div>
+    <div class="text-outline hover:text-on-surface transition-colors">68,000.00</div>
+    <div class="text-outline hover:text-on-surface transition-colors">67,500.00</div>
+    
+    <!-- Active Live Price Highlighter on Y-Axis -->
+    <div class="my-0.5 -mr-1 py-0.5 pl-1.5 pr-1 rounded-l bg-primary-container text-on-primary-container font-bold text-[11px] shadow-[0_0_12px_rgba(0,229,255,0.6)] flex items-center justify-end gap-0.5 tracking-tight">
+      <span class="animate-pulse w-1.5 h-1.5 rounded-full bg-on-primary-container inline-block"></span>
+      <span class="">67,420.50</span>
+    </div>
+    
+    <div class="text-primary-fixed-dim font-medium">66,800.00</div>
+    <div class="text-tertiary-fixed-dim font-medium">66,300.00</div>
+    <div class="text-error font-medium">65,950.00</div>
+    <div class="text-outline hover:text-on-surface transition-colors">65,500.00</div>
+    <div class="text-outline hover:text-on-surface transition-colors">65,000.00</div>
+    <div class="text-outline-variant text-[9px] pt-1 border-t border-outline-variant/20">USDT</div>
+  </div>
+</div></div>
+<!-- Real-Time Micro Stats & Depth Split Ticker -->
+<div class="px-gutter py-2.5 bg-surface-container-low flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Funding Rate</span>
+<span class="font-data-sm text-data-sm text-secondary-container font-semibold">+0.0100% (03:14:22)</span>
+</div>
+</div>
+<div class="h-6 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Order Book Depth</span>
+<div class="flex items-center gap-1.5 font-data-sm text-data-sm">
+<span class="text-secondary-container">58% Bids</span>
+<span class="text-outline">/</span>
+<span class="text-error">42% Asks</span>
+</div>
+</div>
+</div>
+<div class="h-6 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-2">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">Index / Mark</span>
+<span class="font-data-sm text-data-sm text-on-surface">$67,410 / $67,418</span>
+</div>
+</div>
+</div>
+<!-- Live Bot / Active Position Floating Cockpit Banner -->
+<div class="mx-gutter mt-3 p-3 rounded-xl bg-surface-container-high/90 backdrop-blur-2xl shadow-xl flex flex-col gap-2.5">
+<!-- Top Header of Active Position -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/15 text-secondary-container font-label-sm text-label-sm font-bold uppercase tracking-wider">
+          Long 10x
+        </span>
+<span class="font-headline-sm text-[15px] font-bold text-on-surface">BTCUSDT Perp</span>
+<span class="relative flex h-2 w-2 ml-1">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+</span>
+</div>
+<div class="flex items-center gap-1.5">
+<a class="px-2 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-bright transition-colors" href="https://tradingview.com" rel="noopener noreferrer" target="_blank">
+<span class="">TradingView</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Position Key Numerical Readout -->
+<div class="grid grid-cols-3 gap-2 py-1.5 px-2.5 rounded-lg bg-surface-container-lowest">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Unrealized PnL</span>
+<div class="flex items-baseline gap-1">
+<span class="font-data-md text-data-md font-bold text-secondary-container">+$420.80</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+6.31% ROE</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Size / Margin</span>
+<span class="font-data-md text-data-md font-semibold text-on-surface">0.074 BTC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">500 USDT (Cross)</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">Est. Liq Price</span>
+<span class="font-data-md text-data-md font-bold text-error">$61,040.20</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Risk: 14.2%</span>
+</div>
+</div>
+<!-- Interactive Execution Actions -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 rounded-lg bg-surface-container text-primary font-title-sm text-title-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-bright active:scale-98 transition-all" id="adjustTpSlBtn">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span class="">TP / SL</span>
+</button>
+<button class="flex-1 py-2 rounded-lg bg-surface-container text-on-surface font-title-sm text-title-sm font-semibold flex items-center justify-center gap-1 hover:bg-surface-bright active:scale-98 transition-all" id="reverseBtn">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+<span class="">Reverse</span>
+</button>
+<!-- Instant Exit Button with Safety Confirmation Aura -->
+<button class="flex-[1.2] py-2 px-3 rounded-lg bg-error-container text-on-error-container font-title-sm text-title-sm font-bold flex items-center justify-center gap-1.5 shadow-[0_0_16px_rgba(255,59,87,0.3)] active:scale-95 transition-all" id="exitPositionBtn">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span>
+<span class="">Exit Now</span>
+</button>
+</div>
+</div>
+<!-- Built-In Technical Indicators Modal / Slide-Up Panel -->
+<div class="hidden fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md flex flex-col justify-end" id="indicatorsModal">
+<div class="w-full max-h-[85vh] bg-surface-container-high rounded-t-2xl p-4 flex flex-col gap-3 shadow-2xl overflow-hidden">
+<!-- Modal Header -->
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">tune</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Indicators &amp; Strategies</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="closeIndicatorsBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Search & Custom Script Toggle -->
+<div class="flex items-center gap-2">
+<div class="flex-1 flex items-center gap-2 px-3 py-2 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-outline text-[18px]">search</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none placeholder:text-outline" placeholder="Search 16 built-in indicators..." type="text">
+</div>
+<button class="px-3 py-2 rounded-lg bg-surface-container text-primary font-label-md text-label-md font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span class="">Pine Script</span>
+</button>
+</div>
+<!-- Indicators List Grid (16 Built-in Indicators) -->
+<div class="overflow-y-auto max-h-[50vh] flex flex-col gap-1.5 pr-1 no-scrollbar">
+<!-- EMA (Active) -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-primary">EMA (Exponential Moving Average)</span>
+<span class="px-1.5 py-0.2 rounded bg-primary/10 text-primary font-label-sm text-[10px]">Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Parameters: 20, 50, Close</span>
+</div>
+<button class="p-1 text-primary-container"><span class="material-symbols-outlined text-[20px]">check_box</span></button>
+</div>
+<!-- Supertrend (Active) -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-secondary-container">Supertrend</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container/10 text-secondary-container font-label-sm text-[10px]">Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">ATR Period 10, Multiplier 3.0</span>
+</div>
+<button class="p-1 text-primary-container"><span class="material-symbols-outlined text-[20px]">check_box</span></button>
+</div>
+<!-- Bollinger Bands (Active) -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Bollinger Bands</span>
+<span class="px-1.5 py-0.2 rounded bg-primary/10 text-primary font-label-sm text-[10px]">Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Length 20, StdDev 2</span>
+</div>
+<button class="p-1 text-primary-container"><span class="material-symbols-outlined text-[20px]">check_box</span></button>
+</div>
+<!-- SMA -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">SMA (Simple Moving Average)</span>
+<span class="font-body-sm text-body-sm text-outline">Trend tracking baseline moving average</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- VWAP -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">VWAP (Volume Weighted Avg Price)</span>
+<span class="font-body-sm text-body-sm text-outline">Intraday benchmark volume weighted line</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- RSI -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">RSI (Relative Strength Index)</span>
+<span class="font-body-sm text-body-sm text-outline">Momentum oscillator 14, OB 70 / OS 30</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- MACD -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">MACD (Convergence Divergence)</span>
+<span class="font-body-sm text-body-sm text-outline">Fast 12, Slow 26, Signal 9 histogram</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- Keltner Channels -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Keltner Channels</span>
+<span class="font-body-sm text-body-sm text-outline">Volatility based envelopes using ATR</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- Donchian Channels -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Donchian Channels</span>
+<span class="font-body-sm text-body-sm text-outline">High-Low bands for breakout trading</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- Stochastic Oscillator -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Stochastic Oscillator</span>
+<span class="font-body-sm text-body-sm text-outline">%K 14, %D 3, Smooth 3</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- ADX -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">ADX (Average Directional Index)</span>
+<span class="font-body-sm text-body-sm text-outline">Quantifies trend strength independent of direction</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- ATR -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">ATR (Average True Range)</span>
+<span class="font-body-sm text-body-sm text-outline">Market volatility metric for stop calculations</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- Williams %R -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Williams %R</span>
+<span class="font-body-sm text-body-sm text-outline">Overbought and oversold levels detector</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- CCI -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">CCI (Commodity Channel Index)</span>
+<span class="font-body-sm text-body-sm text-outline">Identifies cyclical turns in price momentum</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- ROC -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">ROC (Rate of Change)</span>
+<span class="font-body-sm text-body-sm text-outline">Percentage speed of price change</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+<!-- OBV -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container hover:bg-surface-bright transition-colors cursor-pointer">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">OBV (On-Balance Volume)</span>
+<span class="font-body-sm text-body-sm text-outline">Cumulative volume flow indicator</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">check_box_outline_blank</span>
+</div>
+</div>
+<!-- Save & Apply -->
+<button class="w-full py-2.5 rounded-lg bg-primary-container text-on-primary-container font-title-sm text-title-sm font-bold shadow-[0_0_14px_rgba(0,229,255,0.3)]" id="saveIndicatorsBtn">
+        Apply Indicators (3 Active)
+      </button>
+</div>
+</div>
+<!-- Exit Safety Confirmation Toast Dialog -->
+<div class="hidden fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-4" id="safetyModal">
+<div class="w-full max-w-sm bg-surface-container-high rounded-xl p-4 flex flex-col gap-3 shadow-2xl">
+<div class="flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+<span class="font-headline-sm text-headline-sm font-bold">Instant Market Exit</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Are you sure you want to market close your <strong class="text-on-surface">0.074 BTC Long</strong>? Slippage protection is set at 0.05%. Estimated realized PnL: <strong class="text-secondary-container">+$420.80</strong>.
+      </p>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2 rounded-lg bg-surface-container text-on-surface font-title-sm text-title-sm font-semibold" id="cancelExitBtn">
+          Cancel
+        </button>
+<button class="flex-1 py-2 rounded-lg bg-error text-on-error font-title-sm text-title-sm font-bold shadow-[0_0_14px_rgba(255,59,87,0.3)]" id="confirmExitBtn">
+          Confirm Close
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // UI Interactive Triggers
+  const pairSelectorBtn = document.getElementById('pairSelectorBtn');
+  const pairDrawer = document.getElementById('pairDrawer');
+  const pairChevron = document.getElementById('pairChevron');
+
+  pairSelectorBtn.addEventListener('click', () => {
+    pairDrawer.classList.toggle('hidden');
+    pairChevron.classList.toggle('rotate-180');
+  });
+
+  const settingsToggleBtn = document.getElementById('settingsToggleBtn');
+  const chartSettingsRow = document.getElementById('chartSettingsRow');
+  settingsToggleBtn.addEventListener('click', () => {
+    chartSettingsRow.classList.toggle('hidden');
+  });
+
+  const openIndicatorsBtn = document.getElementById('openIndicatorsBtn');
+  const closeIndicatorsBtn = document.getElementById('closeIndicatorsBtn');
+  const saveIndicatorsBtn = document.getElementById('saveIndicatorsBtn');
+  const indicatorsModal = document.getElementById('indicatorsModal');
+
+  openIndicatorsBtn.addEventListener('click', () => {
+    indicatorsModal.classList.remove('hidden');
+  });
+  closeIndicatorsBtn.addEventListener('click', () => {
+    indicatorsModal.classList.add('hidden');
+  });
+  saveIndicatorsBtn.addEventListener('click', () => {
+    indicatorsModal.classList.add('hidden');
+  });
+
+  const exitPositionBtn = document.getElementById('exitPositionBtn');
+  const safetyModal = document.getElementById('safetyModal');
+  const cancelExitBtn = document.getElementById('cancelExitBtn');
+  const confirmExitBtn = document.getElementById('confirmExitBtn');
+
+  exitPositionBtn.addEventListener('click', () => {
+    safetyModal.classList.remove('hidden');
+  });
+  cancelExitBtn.addEventListener('click', () => {
+    safetyModal.classList.add('hidden');
+  });
+  confirmExitBtn.addEventListener('click', () => {
+    safetyModal.classList.add('hidden');
+    exitPositionBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">progress_activity</span> Closing...';
+    setTimeout(() => {
+      exitPositionBtn.innerHTML = 'Closed';
+      exitPositionBtn.classList.remove('bg-error-container', 'text-on-error-container');
+      exitPositionBtn.classList.add('bg-surface-container', 'text-on-surface-variant');
+    }, 1200);
+  });
+
+  // Timeframe switch micro-interactions
+  const tfButtons = document.querySelectorAll('#tfList button');
+  tfButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tfButtons.forEach(b => {
+        b.className = 'px-2 py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors';
+      });
+      btn.className = 'px-2.5 py-1 rounded-md font-label-md text-label-md bg-primary-container text-on-primary-container font-bold shadow-[0_0_14px_rgba(0,229,255,0.4)]';
+    });
+  });
+
+  // Heartbeat live price fluctuation effect
+  const livePriceEl = document.getElementById('liveTickerPrice');
+  setInterval(() => {
+    const delta = (Math.random() * 8 - 3.8);
+    const base = 67420.50 + delta;
+    livePriceEl.innerText = '$' + base.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }, 2200);
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 transition-all text-primary-container font-semibold" data-path="chart" href="#"><span class="material-symbols-outlined text-[22px]">candlestick_chart</span><span class="font-label-sm text-label-sm">Chart</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-on-surface-variant transition-all" data-path="strategy" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm">Strategy</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-on-surface-variant transition-all relative" data-path="auto-trade" href="#"><span class="relative"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="absolute -top-1 -right-1.5 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span></span></span><span class="font-label-sm text-label-sm">Auto Trade</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-on-surface-variant transition-all" data-path="screener" href="#"><span class="material-symbols-outlined text-[22px]">radar</span><span class="font-label-sm text-label-sm">Screener</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-12 text-on-surface-variant transition-all" data-path="menu" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Menu</span></a></div></nav>
+
+<script src="../nav.js"></script></body></html>
